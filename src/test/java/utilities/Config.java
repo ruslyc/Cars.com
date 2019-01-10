@@ -7,7 +7,7 @@ public class Config {
 
     private static Properties pro;
     static{
-        String path = "C:\\Users\\rusly\\IdeaProjects\\com.cars\\configurations.properties";
+        String path = "configurations.properties";
         try {
             FileInputStream file = new FileInputStream(path);
             pro= new Properties();

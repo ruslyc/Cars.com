@@ -10,7 +10,6 @@ public class SmokeTest {
 
     @Test
     public void validLogin(){
-        System.out.println(Config.getProperty("loginPageUrl"));
         Driver.getDriver().get(Config.getProperty("loginPageUrl"));
         CarsLoginPage clp = new CarsLoginPage();
         clp.userEmail.sendKeys(Config.getProperty("userEmail"));
