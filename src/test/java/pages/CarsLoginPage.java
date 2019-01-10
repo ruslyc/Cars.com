@@ -4,13 +4,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import utilities.Config;
+import utilities.Driver;
 
-public class LoginPage {
+public class CarsLoginPage {
 
     WebDriver driver;
 
-    public LoginPage(WebDriver driver){
-        this.driver = driver;
+    public CarsLoginPage(){
+        this.driver = Driver.getDriver();
         PageFactory.initElements(driver,this);
     }
 
@@ -26,4 +30,10 @@ public class LoginPage {
     @FindBy(xpath = "//a[@class='forgot-password']")
     public WebElement forgotPassword;
 
+
+    public void login(String usernameText, String passwordText){
+        userEmail.sendKeys(usernameText);
+        password.sendKeys(passwordText);
+        submitButton.click();
+    }
 }
