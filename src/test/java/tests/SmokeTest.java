@@ -15,6 +15,5 @@ public class SmokeTest {
         clp.userEmail.sendKeys(Config.getProperty("userEmail"));
         clp.password.sendKeys(Config.getProperty("password"));
         clp.submitButton.click();
-
     }
 }
